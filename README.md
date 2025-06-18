@@ -18,6 +18,54 @@ Esta API requiere Python y las librerias señaladas en el requirements.txt
 ```
 python app.py
 ```
+## Cambios recientes y mejoras
+
+- Modularización del código: se crearon `train.py`, `features.py`, `dataset.py`, `config.py`, `plots.py`.
+- Reentrenamiento del modelo con `SMOTE` y `RandomizedSearchCV`.
+- Visualización de resultados con matriz de confusión y curva ROC.
+- Separación de configuración en `config.py`.
+- Inclusión del notebook `model_retrain.ipynb` para documentación del proceso.
+
+## Reentrenar el modelo
+
+Para reentrenar el modelo desde consola:
+
+python laboratorio_ml/train.py
+
+
+Esto generará un nuevo modelo en:
+
+churn/models/better_model.pk
+
+
+## Estructura del proyecto
+
+LABORATORIO-MACHINE-LEARNING-MAIN/
+│
+├── churn/
+│   └── models/
+│       ├── features_retrain.pk
+│       └── model.pk
+├── data/
+│   └── churn.csv
+│
+├── laboratorio_ml/
+│   ├──__init__.py
+│   ├── app.py
+│   ├── config.py
+│   ├── dataset.py
+│   ├── features.py
+│   ├── plots.py
+│   └── train.py
+│
+├── notebooks/
+│   ├── .ipynb_checkpoints/
+│   ├── model_retrain.ipynb
+│   └── modelgeneration_27092023_ricalanis.ipynb
+│
+├── LICENSE
+├── README.md
+└── requirements.txt
 
 #### Verificar que la app esta corriendo exitosamente
 
